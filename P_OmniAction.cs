@@ -33,7 +33,7 @@ namespace Pokeyi.UdonSharp
         [Header("[12] Object-Pool Spawn   [13] Object-Pool Reset")]
         [Space]
         [Tooltip("Function selector. Detailed in header above.")]
-        [SerializeField] [Range(0, 13)] private int targetFunction;
+        [Range(0, 13)] public int targetFunction;
         [Tooltip("Targeted game objects.")]
         [SerializeField] private GameObject[] targetObjects;
 
@@ -92,9 +92,9 @@ namespace Pokeyi.UdonSharp
         [Tooltip("Number of seconds to delay target object function.")]
         [SerializeField] private float delayTime = 0F;
         [Tooltip("AudioLink band to activate functions.")]
-        [SerializeField] [Range(0, 3)] private int audioLinkBand = 0;
+        [Range(0, 3)] [SerializeField] private int audioLinkBand = 0;
         [Tooltip("AudioLink band threshold to activate functions.")]
-        [SerializeField] [Range(0F, 1F)] private float audioLinkThreshold = 0.125F;
+        [Range(0F, 1F)] [SerializeField] private float audioLinkThreshold = 0.125F;
         [Tooltip("AudioLink source script.")]
         [SerializeField] private UdonSharpBehaviour audioLinkSource;
 
